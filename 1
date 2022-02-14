@@ -1,0 +1,11 @@
+model = CFF::Model.new('Ruby CFF Library') do |cff|
+  cff.version = CFF::VERSION
+  cff.date_released = Date.today
+  cff.authors << CFF::Person.new('Robert', 'Haines')
+  cff.license = 'Apache-2.0'
+  cff.keywords << 'ruby' << 'credit' << 'citation'
+  cff.repository_artifact = 'https://rubygems.org/gems/cff'
+  cff.repository_code = 'https://github.com/yangheng95/PyABSA'
+end
+
+CFF::File.write('CITATION.cff', model)
